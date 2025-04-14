@@ -1,0 +1,19 @@
+explanation of each component:
+app.py: This file is used to load known data for training the regression model and provides an interface via the Flask API for inputting the independent variable parameters w and x and outputting the predicted observed stakeholder engagement score.
+Dockerfile: Used to build container images to ensure consistency in the user's environment. Containerization enables code to run stably in any Docker-enabled environment, thereby improving code reproducibility and deployment efficiency.
+Requirements.txt: lists all the required Python dependencies to ensure that the project can install the required version of libraries in different environments and avoid version conflicts.
+How containerization improves reproducibility of results: because the version of the python package is specified and docker is used to package all the necessary components into a single image to avoid differences in results due to host differences.
+
+Q1.2
+Estimated τ: -9.10572148400991
+p-value:  0.0003633014763592134 (<0.05)
+With a p-value < 0.05, it can be argued that the effect of ATE is statistically significant and unlikely to be due to chance error, supporting the existence of a causal effect.
+
+Q1.3
+Assumed that no factors other than Sustainable Expenditures X influence both Treatment Status W and Participation Score Y.
+Assumed that a company's results are only affected by its own participation in the carbon offset program and do not change depending on the status of other companies, and that all participation or non-participation is the same.
+Assumed that the regression model used incorporates all the important factors that would really affect the outcome.
+
+Q2.3
+when W=1, X=20, we can have result:
+"predicted_engagement_score":117.15789954894551
